@@ -1,0 +1,80 @@
+.todo-item {
+  width: 80%;
+  margin: 0.3rem auto;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #83460d;
+  border-radius: 4px;
+  background: #ffb546;
+  font-size: 1rem;
+  transform: scale(0);
+  transform-origin: top;
+}
+
+input[type="text"] {
+  border: none;
+  background: #ffb546;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  -webkit-appearance: none;
+  border: 2px solid #83460d;
+  border-radius: 4px;
+  margin-right: 0.3rem;
+  outline: none;
+  transition: 200ms;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background: #83460d;
+}
+input[type="checkbox"]:checked::before,
+input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 12%;
+  width: 3px;
+  height: 8px;
+  background: #ffca7b;
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  left: 65%;
+  top: -4px;
+  width: 3px;
+  height: 18px;
+  background: #ffca7b;
+  transform: rotate(35deg);
+  opacity: 0;
+}
+
+p {
+  width: 60%;
+}
+
+.todo-icons {
+  font-size: 1.3rem;
+  color: #4e2d11;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .todo-item {
+    width: 50%;
+  }
+}
