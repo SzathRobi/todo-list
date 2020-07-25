@@ -7,10 +7,10 @@ export default function App() {
   const [inputValue, setInputValue] = useState("");
   const updateInputValue = (event) => setInputValue(event.target.value);
 
-  const savedTodos = JSON.parse(localStorage.savedTodos);
-  const savedProjects = JSON.parse(localStorage.savedProjects);
+  //const savedTodos = JSON.parse(localStorage.savedTodos);
+  //const savedProjects = JSON.parse(localStorage.savedProjects);
 
-  const [todos, setTodos] = useState(savedTodos);
+  const [todos, setTodos] = useState([]); // useState(savedTodos);
   const addTodo = (event) => {
     event.preventDefault();
     if (inputValue !== "") {
@@ -47,7 +47,7 @@ export default function App() {
     setTodos(newTodos);
   };
 
-  const [projects, setProjects] = useState(savedProjects);
+  const [projects, setProjects] = useState([]); // useState(savedProjects);
   const addProject = (event) => {
     event.preventDefault();
     if (inputValue !== "") {
@@ -76,15 +76,15 @@ export default function App() {
   const [haveProject, setHaveProject] = useState(false);
   ////////////////////////////////////////////////////////////////////////////////
 
-  const JSONreadyTodos = JSON.stringify(todos);
+  /*const JSONreadyTodos = JSON.stringify(todos);
   const JSONreadyProjects = JSON.stringify(projects);
 
   useEffect(() => {
     localStorage.setItem("savedTodos", JSONreadyTodos);
     localStorage.setItem("savedProjects", JSONreadyProjects);
-  }, [todos, projects]);
+  }, [todos, projects]);*/
 
-  // const savedTds = localStorage.getItem("savedTodos");
+  //const savedTds = localStorage.getItem("savedTodos");
   ////////////////////////////////////////////////////////////////////////////////
   return (
     <div className="App">
